@@ -100,10 +100,17 @@ textarea {
 
 /*------------------Base body-style-------------------------------------------*/
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body{
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 4fr 1fr;
+  grid-row-gap: 50px;
 
 
 /*----------------body grid-areas--------------------*/
@@ -133,29 +140,43 @@ header{
   background-color: red;
   display:grid;
   grid-template-columns:1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items:center;
-  align-items: center;
+  grid-template-rows: 1fr 2fr;
+
   }
 header .nav{
   justify-self:center;
+  align-self: center;
+  width:60%;
 }
 header .nav-links{
   display:flex;
   list-style: none;
   justify-content: center;
+  border: 2px solid grey;
 }
-
+header .logo{
+  border: 2px solid grey;
+}
+header h1{
+  border: 2px solid grey;
+  align-self:start;
+  justify-self: center;
+}
 /*------------Basic footer-style----------------------------------------------*/
 
 footer{
-  width:100%;
+  width:55%;
   background-color: purple;
   display:grid;
   grid-template-columns:1fr;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+  justify-self:center;
+}
+
+address h3,p,a{
+  text-align: center;
 }
 
 main{
