@@ -98,7 +98,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/*------------------Base body-style-------------------------------------------*/
+/*------------------BASE STYLE-MOBILE------------------------------------------*/
 
 *{
   box-sizing: border-box;
@@ -108,81 +108,101 @@ textarea {
 
 body{
   display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 4fr 1fr;
-  grid-row-gap: 50px;
-
-
-/*----------------body grid-areas--------------------*/
-
-grid-template-areas:
-
-"header"
-"main"
-"footer"
-
-}
-.header{
-  grid-area:header;
-}
-.main{
-  grid-area:main;
-}
-.footer{
-  grid-area:footer;
 }
 
+/*Header*/
 
-/*------------Basic header-style----------------------------------------------*/
-
-header{
-  width:100%;
-  background-color: red;
-  display:grid;
-  grid-template-columns:1fr;
-  grid-template-rows: 1fr 2fr;
-
-  }
-header .nav{
-  justify-self:center;
-  align-self: center;
-  width:60%;
+.wrapper-whole{
+  margin: 0rem 1rem 0 1rem;
+  border: 2px solid red;
 }
-header .nav-links{
-  display:flex;
+.nav-links{
+  display: flex;
   list-style: none;
-  justify-content: center;
-  border: 2px solid grey;
 }
-header .logo{
-  border: 2px solid grey;
-}
-header h1{
-  border: 2px solid grey;
-  align-self:start;
-  justify-self: center;
-}
-/*------------Basic footer-style----------------------------------------------*/
-
-footer{
-  width:55%;
-  background-color: purple;
+.flex-nav{
   display:grid;
-  grid-template-columns:1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  align-items: center;
+  justify-items:center;
+}
+
+header #one{
+  margin-top: 1rem;
+}
+
+/*Main*/
+
+.autogrid-signup{
+  --autogrid-signup-min-size:16rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-signup-min-size),1fr));
+  grid-gap:1rem;
+  justify-items:center;
+}
+.autogrid-article{
+  --autogrid-signup-min-size:16rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-signup-min-size),1fr));
+  grid-gap:1rem;
   justify-items: center;
-  justify-self:center;
+}
+.autogrid-reviews{
+  --autogrid-signup-min-size:16rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-signup-min-size),1fr));
+  grid-gap:1rem;
 }
 
-address h3,p,a{
+.signup-text{
+  display:none;
+}
+.signup-text{
+  max-width: 15rem;
+}
+.button{
+  padding: 1rem;
+  background-color: green;
+}
+
+.autogrid-article{
+  text-align:center;
+}
+/*Main-About*/
+
+.autogrid-text-about{
+  --autogrid-text-about-min-size:16rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-text-about-min-size),1fr));
+  grid-gap:1rem;
+}
+
+/*Main-Faq*/
+
+.autogrid-article-faq{
+  --autogrid-article-faq-min-size:16rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-article-faq-min-size),1fr));
+  grid-gap: 1rem;
+}
+
+/*Footer*/
+
+.autogrid-contact{
+  --autogrid-signup-min-size:16rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-signup-min-size),1fr));
+  grid-gap:1rem;
+  place-items:center;
+}
+address{
+  text-align:center;
+}
+.copyright{
   text-align: center;
+  padding: 1.5rem 0 1rem 0;
 }
-
-main{
-  background-color: yellow;
+footer #three{
+  margin-top:3rem;
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -272,16 +292,38 @@ main{
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (min-width:32rem){
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  /*Header*/
+
+  .wrapper-whole{
+    margin: 0 3rem 0 3rem;
+  }
+  .flex-nav{
+    display:flex;
+    justify-content: space-between;
+  }
+  header #one{
+    margin-top: 1.5rem;
+  }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width:40rem){
+
+  /*Main-Faq*/
+  .autogrid-article-faq{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+@media only screen and (min-width:60rem){
+  .wrapper-whole{
+    margin: 0 4rem 0 4rem;
+  }
+  .autogrid-article{
+    grid-template-columns: repeat(3,1fr);
+  }
 }
 
 /* ==========================================================================

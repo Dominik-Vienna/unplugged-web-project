@@ -23,65 +23,89 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">
-      <a href="#"><img src="../img/unpluggedlogo.png" alt="unplugged logo"></a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="faq/index.html" target="_blank">FAQ</a></li>
-        <li><a href="about/index.html" target="_blank">About</a></li>
-      </ul>
-    </nav>
-    <!--<h1>Retreat from the desk, return refreshed.</h1>-->
+  <header>
+    <div id="one" class="wrapper-whole">
+      <nav class="wrapper-nav">
+        <div class=flex-nav>
+          <div class="logo">
+            <a href="#"><img src="../img/unpluggedlogo-200px.png" alt="unplugged logo"></a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="faq/index.html" target="_blank">FAQ</a></li>
+            <li><a href="about/index.html" target="_blank">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="header-h1">Retreat from the desk, return refreshed.</h1>
+    </div>
   </header>
 
-  <main class="main-faq">
-    <h1 class="h1-main-faq">
-      Frequently Asked <br>
+  <main>
+    <div class="wrapper-whole">
+      <h1>
+      Frequently Asked
       Questions</h1>
-
-    <article>
-      <h3 class="h3-main-faq">
-        How do I get to the Unplugged<br>
-        retreat?
-      </h3>
-      <p class"text-main-faq">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      </p>
-    </article>
-    <article>
-      <h3 class="h3-main-faq">
-        What kind of team is right for the<br>
-        Unplugged retreat?
-      </h3>
-      <p class"text-main-faq">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      </p>
-    </article>
-    <article>
-      <h3 class="h3-main-faq">
-        Is there really no wifi available?
-      </h3>
-      <p class"text-main-faq">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      </p>
-    </article>
+      <div class="autogrid-article-faq">
+          <article>
+            <h3 class="h3-main-faq">
+            How do I get to the Unplugged
+            retreat?
+            </h3>
+            <p class="text-main-faq">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </p>
+          </article>
+          <article>
+            <h3 class="h3-main-faq">
+            What kind of team is right for the
+            Unplugged retreat?
+            </h3>
+            <p class="text-main-faq">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </p>
+          </article>
+          <article>
+            <h3 class="h3-main-faq">
+            What size teams can you accomodate
+            </h3>
+            <p class="text-main-faq">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </p>
+          </article>
+          <article>
+            <h3 class="h3-main-faq">
+            Is there really no wifi available?
+            </h3>
+            <p class="text-main-faq">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            </p>
+          </article>
+      </div>
+    </div>
   </main>
 
-  <footer class="footer">
-    <address class="contact"> <!--Browser and GOOGLE wissen so, dass es sich hier um eine Adresse handelt!! -->
-      <h3>Contact</h3>
-      <p>555-555-555<br>
-      <a href"#" target="_blank">hello@unplugged.com</a></p>
-
-    </address>
-    <div class="social-media">
-      <h3>Social</h3>
-    </div>
-    <div class="copyright">
+  <footer>
+    <div id="three" class="wrapper-whole">
+      <div class="wrapper-contact-grid">
+        <div class="autogrid-contact">
+          <address> <!--Browser and GOOGLE wissen so, dass es sich hier um eine Adresse handelt!! -->
+            <h3>Contact</h3>
+            <p>555-555-555</p>
+            <a href"#" target="_blank">hello@unplugged.com</a>
+          </address>
+          <div class="social-media">
+          <h3>Social</h3>
+          <p class="icons-footer"></p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>copyright</p>
+      </div>
     </div>
   </footer>
+
+
 
   <script src="../js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
