@@ -106,7 +106,7 @@ textarea {
   padding: 0;
 }
 
-/*General Styles*/
+/*Global Styles*/
 
 body{
   font-family: 'Open Sans', sans-serif;
@@ -124,12 +124,22 @@ a{
   text-decoration: none;
   color:
 }
-
+figure{
+  margin:0;
+}
+img{
+  width:100%;
+}
 body{
   display:grid;
 }
 
 /*Header*/
+
+header{
+  background: url("../img/jake-melara-30679-unsplash.jpg") center no-repeat #333;
+  background-size: cover;
+}
 
 .wrapper-whole{
   margin: 0rem 1rem 0 1rem;
@@ -153,20 +163,29 @@ header #one{
 
 /*Main*/
 
+.article-back-img{
+  background: url("../img/rawpixel-800820-unsplash1-72dpi.jpg") center no-repeat #333;
+  background-size:cover;
+}
+
 .autogrid-signup{
   --autogrid-signup-min-size:16rem;
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-signup-min-size),1fr));
   grid-gap:1rem;
-  justify-items:center;
+  place-items:center;
+  border: 2px solid grey;
 }
+
 .autogrid-article{
   --autogrid-signup-min-size:16rem;
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--autogrid-signup-min-size),1fr));
   grid-gap:1rem;
   justify-items: center;
+  border: 2px solid orange;
 }
+
 .autogrid-reviews{
   --autogrid-signup-min-size:16rem;
   display:grid;
@@ -177,12 +196,9 @@ header #one{
 .signup-text{
   display:none;
 }
-.signup-text{
-  max-width: 15rem;
-}
-.button{
-  padding: 1rem;
-  background-color: green;
+
+.email{
+  display:none;
 }
 
 .autogrid-article{
@@ -309,6 +325,33 @@ footer #three{
   clear: both;
 }
 
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+
+  color: #2a423a;
+  font-style: italic;
+  padding: 0.75em;
+}
+
+input[type=button] {
+
+  padding: 1em;
+
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -325,6 +368,9 @@ footer #three{
     display:flex;
     justify-content: space-between;
   }
+  header figure{
+    width:80%;
+  }
   header #one{
     margin-top: 1.5rem;
   }
@@ -335,11 +381,11 @@ footer #three{
   /*Main*/
   .signup-text{
     display:block;
-    justify-self:start;
   }
-  .download-button{
-    justify-self:end;
+  .email{
+    display:block;
   }
+
   /*Main-Faq*/
   .autogrid-article-faq{
     grid-template-columns: repeat(2,1fr);
